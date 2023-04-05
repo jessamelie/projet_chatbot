@@ -20,9 +20,30 @@ font-size: 70px;
 }
 
 #conversation{
+    display: flex;
     border: black solid 1px;
     width: 500px;
     height: 600px;
+
+}
+
+p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    display:inline;
+    float:right;
+    background-color: rgb(158, 158, 236);
+    height: fit-content;
+    width: max-content;
+}
+
+#profilPixBot{
+    border: black solid 1px;
+    width: 20px;
+    height: 20px;
+}
+
+#firstBotMsg{
 
 }
 
