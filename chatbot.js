@@ -1,1 +1,0 @@
-let messageChatbot = "Bonjour"
