@@ -6,7 +6,17 @@ const userID = "100012"
 
 //BOT : MESSAGE D'ACCUEIL FIXE
 const firstBotMsg = document.getElementById("firstBotMsg")
- firstBotMsg.innerText ="Hi Buddy, how can I help you?"
+ firstBotMsg.innerHTML =`<div class="response">
+ <div class="responseAvatar">
+ <img class="img-circle avatar" alt="chat avatar" src="bot.png">
+ </div>
+ <div class="message-text-wrapper">
+     <div class="message-text">
+        Hey buddy, how can I help you?
+     </div>
+ </div>
+ <!-- <p class="time-stamp"><i class="fa fa-check"></i> 2 minute ago</p>-->
+</div>`
 
 //USER : MESSAGE REQUETE
 
@@ -16,8 +26,8 @@ const sendAPI = async() => {
     let urlAPI = `http://api.brainshop.ai/get?bid=174304&key=${APIkey}&uid=${userID}&msg=${message}`
 
     conversation.innerHTML +=
-    `<div class="messageUser">
-        <div class="avatar">
+    `<div class="request">
+        <div class="requestAvatar">
         <img class="img-circle avatar" alt="chat avatar" src="directeur.png">
         </div>
         <div class="message-text-wrapper">
@@ -25,7 +35,7 @@ const sendAPI = async() => {
                 ${message}
             </div>
         </div>
-        <p class="time-stamp"><i class="fa fa-check"></i> 2 minute ago</p>
+        <!-- <p class="time-stamp"><i class="fa fa-check"></i> 2 minute ago</p>-->
       </div>`
     messageUser.value = ""
 
@@ -33,17 +43,19 @@ const sendAPI = async() => {
      let data = await response.json()
 
      conversation.innerHTML +=
-     `<div class="messageUser">
-         <div class="avatar">
-         <img class="img-circle avatar" alt="chat avatar" src="directeur.png">
+     `<div class="response">
+     <div class="responseAvatar">
+     <img class="img-circle avatar" alt="chat avatar" src="bot.png">
+     </div>
+     <div class="message-text-wrapper">
+         <div class="message-text">
+         ${data.cnt}
          </div>
-         <div class="message-text-wrapper">
-             <div class="message-text">
-                 ${data.cnt}
-             </div>
-         </div>
-         <p class="time-stamp"><i class="fa fa-check"></i> 2 minute ago</p>
-       </div>`
+     </div>
+    <!-- <p class="time-stamp"><i class="fa fa-check"></i> 2 minute ago</p>-->
+    </div>`
+                 
+             
 
 
 }
