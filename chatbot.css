@@ -1,5 +1,5 @@
 body {
-    background-color:rgb(175, 199, 243)
+    background-color:rgb(110, 154, 236)
 }
 
 h1{
@@ -25,7 +25,8 @@ h1{
     border: black solid 1px;
     width: 500px;
     height: 600px;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 p{
