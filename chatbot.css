@@ -3,8 +3,8 @@ body {
 }
 
 h1{
-text-align: center;
-font-size: 70px;
+    text-align: center;
+    font-size: 70px;
 }
 
 #container{
@@ -14,13 +14,14 @@ font-size: 70px;
 }
 
 #textBlock {
+    border: black solid 1px;
     background-color: #ffffff;
     width: 500px;
     height: 700px;
 }
 
 #conversation{
-    display: flex;
+    /* display: flex; */
     border: black solid 1px;
     width: 500px;
     height: 600px;
@@ -31,10 +32,13 @@ p{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 15px;
     display:inline;
-    float:right;
     background-color: rgb(158, 158, 236);
     height: fit-content;
     width: max-content;
+}
+
+.time-stamp{
+    font-size: 10px;
 }
 
 #profilPixBot{
@@ -43,12 +47,52 @@ p{
     height: 20px;
 }
 
-#firstBotMsg{
-
+#profilUser{
+    border: black solid 1px;
+    width: 20px;
+    height: 20px;
 }
 
 #userInput{
     justify-content: center;
     display: flex;
     padding-top: 50px;
+}
+
+.messageBox{
+    display: block;
+    background-color:rgb(236, 27, 37);
+    width: max-content;
+    height: max-content;
+}
+
+img{
+    width: 50px;
+    height: 50px;
+}
+
+.messageUser .avatar {
+	width: 55px;
+	float: right;
+}
+
+.time-stamp{
+    float:right;
+}
+
+.messageUser .message-text-wrapper {
+    display:table-cell;
+    width:1%;
+}
+
+.messageUser .message-text {
+    padding: 10px 10px 10px 10px;
+    border-radius:4px;
+    border:1px solid #ddd;
+    border:1px solid rgba(221,221,221,0.68);
+    float:right;
+    width: max-content;
+    height: fit-content;
+    -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
 }
